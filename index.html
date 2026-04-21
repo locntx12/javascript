@@ -7,14 +7,22 @@
 </head>
 <body>
   <button onclick="hienThi()"> Hiển thị thời gian </button>
-
   <p id="ketqua"></p>
+  <hr>
+  <button onclick="demClick()">Đếm số lần bấm</button>
+  <p id="ketqua2"></p>
 
   <script>
     function hienThi(){
       let d = new Date();
       let timeString = d.toLocaleString();
       document.getElementById('ketqua').innerHTML = timeString;
+    }
+
+    let dem = 0;
+    function demClick(){
+      dem++;
+      document.getElementById('ketqua2').innerHTML = "Bạn đã bấm nút " + dem + " lần!";
     }
   </script>
 </body>
