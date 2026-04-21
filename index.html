@@ -11,8 +11,22 @@
   <hr>
   <button onclick="demClick()">Đếm số lần bấm</button>
   <p id="ketqua2"></p>
+  <hr>
+  <button onclick="tangSize()">Tăng cỡ chữ</button>
+  <button onclick="giamSize()">Giảm cỡ chữ</button>
+  <p id="ketqua3">Trường Cao đẳng Bách khoa Việt Nam 2025 - 2026</p>
 
   <script>
+    let coChu = 16;
+    function tangSize(){
+      coChu = coChu + 2;
+      document.getElementById('ketqua3').style.fontSize = coChu+'px';
+    }
+    function giamSize(){
+      coChu = coChu - 2;
+      document.getElementById('ketqua3').style.fontSize = coChu+'px';
+    }
+
     function hienThi(){
       let d = new Date();
       let timeString = d.toLocaleString();
